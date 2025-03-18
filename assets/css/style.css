@@ -194,11 +194,18 @@ body {
     .header {
         display: flex;
         background-color: #56efef;
-        padding: 10px 40px;
+        padding: 10px 10px;
         flex-wrap: wrap;
+
+        @media only screen and (max-width: 800px) {
+            .header-left {
+                display: none;
+            }
+        }
 
         .header-left {
             a {
+                margin-left: 30px;
                 border: 1px solid black;
                 border-radius: 5px;
                 text-decoration: none;
@@ -231,7 +238,7 @@ body {
             justify-content: space-evenly;
             flex-wrap: wrap;
             flex: 1;
-            padding: 0 100px 0 100px;
+            padding: 0 20px 0 20px;
             gap: 20px;
 
             a {
@@ -245,15 +252,16 @@ body {
 
                 span {
                     transition: 0.3s;
+                    margin-right: 5px;
                 }
             }
 
             a:hover {
-                transform: scale(1.05);
                 color: green;
+                transform: scale(1.05);
 
                 span {
-                    transform: rotateZ(15deg) translateX(-2px);
+                    transform: rotateZ(15deg);
                 }
             }
         }
@@ -270,20 +278,13 @@ body {
         .title-container {
             display: flex;
             max-width: 1000px;
-            min-height: 200px;
-            /* width: 500px; */
+            width: 100%;
 
             img,
             object {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 1000px;
+                max-width: 1000px;
                 height: auto;
-            }
-
-            h1 {
-                width: 1000px;
+                width: 100%;
             }
         }
 
@@ -363,61 +364,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px;
-
-        .contact-container {
-            max-width: 1000px;
-            display: flex;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        input[type=text],
-        input[type=email],
-        select,
-        textarea {
-            width: 100%;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            padding: 12px;
-            border-radius: 4px;
-            border-color: transparent;
-            box-shadow: 0 0 0 2px #aaa;
-        }
-
-        input {
-            transition: 0.3s;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        input[type=submit] {
-            background-color: #31ffff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        input[type=submit]:hover,
-        input[type=submit]:focus {
-            transform: scale(1.05);
-            background-color: #70ffff;
-        }
-
-        input[type=submit]:active {
-            transform: scale(0.99);
-            transition: 0.1s;
-        }
-
-        .contact-container:has(:focus) textarea:focus,
-        .contact-container:has(:focus) input:focus {
-            box-shadow: 0 0 0 2px #689e48;
-        }
 
         .contact-container:has(:focus) textarea:valid,
         .contact-container:has(:focus) input:valid {
@@ -429,13 +375,66 @@ body {
             box-shadow: 0 0 0 2px #ff0000;
         }
 
-        textarea:invalid~input[type=submit],
-        input:invalid~input[type=submit] {
-            box-shadow: 0 0 0 2px #ff0000;
-            transform: scale(1) !important;
-            background-color: #447070;
-            cursor: default;
-            color: white;
+        .contact-container {
+            max-width: 1000px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 20px;
+            width: 100%;
+
+            form {
+                width: 100%;
+
+                input[type=text],
+                input[type=email],
+                select,
+                textarea {
+                    width: 100%;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                    padding: 12px;
+                    border-radius: 4px;
+                    border-color: transparent;
+                    box-shadow: 0 0 0 2px #aaa;
+                }
+
+                input {
+                    transition: 0.3s;
+                }
+
+                textarea {
+                    resize: vertical;
+                }
+
+                input[type=submit] {
+                    background-color: #31ffff;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                input[type=submit]:hover,
+                input[type=submit]:focus {
+                    transform: scale(1.05);
+                    background-color: #70ffff;
+                }
+
+                input[type=submit]:active {
+                    transform: scale(0.99);
+                    transition: 0.1s;
+                }
+
+                textarea:invalid~input[type=submit],
+                input:invalid~input[type=submit] {
+                    box-shadow: 0 0 0 2px #ff0000;
+                    transform: scale(1) !important;
+                    background-color: #447070;
+                    cursor: default;
+                    color: white;
+                }
+            }
         }
     }
 }

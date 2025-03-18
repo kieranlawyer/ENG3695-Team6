@@ -456,12 +456,9 @@ body {
     }
 
     >input[type="checkbox"]:checked~.content {
-        border: 1px solid #00000022;
-        border-radius: 0 0 10px 10px;
-        border-top: 0;
-        padding: 15px;
         overflow: visible;
-        clip-path: inset(0 0 0 0);
+        max-height: 500px;
+        padding: 15px;
     }
 
     >input[type="checkbox"]:checked~.handle {
@@ -500,9 +497,12 @@ body {
     }
 
     .content {
-        height: auto;
-        clip-path: inset(0 0 100% 0);
-        transition: clip-path 0.3s ease-out;
-        transition: 0.3s ease;
+        border: 1px solid #00000022;
+        border-radius: 0 0 10px 10px;
+        border-top: 0;
+        padding: 0 0 0 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     }
 }

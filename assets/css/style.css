@@ -461,8 +461,7 @@ body {
         border-top: 0;
         padding: 15px;
         overflow: visible;
-        height: auto;
-        transform: scaleY(1);
+        clip-path: inset(0 0 0 0);
     }
 
     >input[type="checkbox"]:checked~.handle {
@@ -501,8 +500,9 @@ body {
     }
 
     .content {
-        overflow-y: hidden;
-        transform: scaleY(0);
+        height: auto;
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.3s ease-out;
         transition: 0.3s ease;
     }
 }

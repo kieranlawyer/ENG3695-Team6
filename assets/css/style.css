@@ -459,8 +459,7 @@ body {
     margin-bottom: 1em;
 
     input[type="checkbox"] {
-        position: absolute;
-        left: -100vw;
+        display: none;
     }
 
     input[type="checkbox"]:checked~.content {
@@ -477,6 +476,7 @@ body {
 
         label {
             border-radius: 10px 10px 0 0;
+            box-shadow: none;
         }
     }
 
@@ -486,6 +486,8 @@ body {
         line-height: 1.2em;
 
         label {
+            box-shadow: 0px 0px 4px black;
+
             border-radius: 10px 10px;
             display: block;
             color: #333;

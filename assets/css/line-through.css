@@ -1,0 +1,29 @@
+.line-through {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.line-through:before {
+    margin-right: 40px;
+}
+
+.line-through:after,
+.line-through:before {
+    content: '';
+    flex: 1;
+    background: #00000044;
+    height: 2px;
+}
+
+.line-through:after {
+    margin-left: 40px;
+}
+
+.line-through:after,
+.line-through:before {
+    content: '';
+    flex: 1;
+    background: #00000044;
+    height: 2px;
+}

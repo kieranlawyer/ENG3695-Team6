@@ -19,6 +19,9 @@ body {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
     font-size: 1.3rem;
+
+    --banner-color: #56efef;
+    --contrast: #d6d6d6;
 }
 
 @supports (font-variation-settings: normal) {
@@ -42,7 +45,7 @@ body {
     .header {
         display: flex;
         justify-content: center;
-        background-color: #56efef;
+        background-color: var(--banner-color);
 
         .header-container {
             max-width: 1000px;
@@ -59,7 +62,7 @@ body {
     }
 
     .introduction {
-        background-color: #CDCDCD;
+        background-color: var(--contrast);
         text-align: left;
         justify-self: center;
         display: flex;
@@ -136,7 +139,7 @@ body {
     }
 
     .features {
-        background-color: #CDCDCD;
+        background-color: var(--contrast);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -188,7 +191,7 @@ body {
 
     .header {
         display: flex;
-        background-color: #56efef;
+        background-color: var(--banner-color);
         padding: 10px 10px;
         flex-wrap: wrap;
 
@@ -269,7 +272,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #56efef;
+        background-color: var(--banner-color);
 
         .banner-container {
             max-width: 1000px;
@@ -319,7 +322,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #CDCDCD;
+        background-color: var(--contrast);
 
         .faqs-container {
             display: flex;
@@ -413,7 +416,7 @@ body {
 }
 
 .alt-color:nth-of-type(odd) {
-    background-color: #CDCDCD;
+    background-color: var(--contrast);
 }
 
 .collapsible {

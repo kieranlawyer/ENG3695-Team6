@@ -13,9 +13,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: auto !important;
-    overscroll-behavior: contain;
 }
 
 :root {
@@ -33,7 +30,13 @@ body {
 .home {
     section {
         width: 100%;
+        border-bottom: 1px solid black;
         padding: 30px;
+    }
+
+    .line {
+        border-top: 1px solid black;
+        width: 100%;
     }
 
     .header {
@@ -53,8 +56,6 @@ body {
                 width: 80%;
             }
         }
-
-        border-bottom: 1px solid black;
     }
 
     .introduction {
@@ -77,8 +78,6 @@ body {
                 font-size: 1.2rem;
             }
         }
-
-        border-bottom: 1px solid black;
     }
 
     .navigation {
@@ -94,7 +93,6 @@ body {
 
             .row {
                 display: flex;
-                flex: 1;
 
                 @media only screen and (max-width: 1050px) {
                     flex-direction: column;
@@ -104,7 +102,6 @@ body {
                     text-decoration: none;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
                     padding: 20px;
                     max-width: 500px;
@@ -114,12 +111,12 @@ body {
                     .img-container {
                         flex: 1;
                         display: flex;
-                        justify-content: center;
                         align-items: center;
                     }
 
                     img {
                         max-width: 400px;
+                        width: 100%;
                         padding: 30px;
                     }
                 }
@@ -136,8 +133,6 @@ body {
                 }
             }
         }
-
-        border-bottom: 1px solid black;
     }
 
     .features {
@@ -184,8 +179,6 @@ body {
             }
         }
     }
-
-    border-bottom: 1px solid black;
 }
 
 .main {
@@ -200,43 +193,12 @@ body {
         flex-wrap: wrap;
 
         @media only screen and (max-width: 800px) {
-            .header-left {
+            .header-container {
                 display: none;
             }
         }
 
-        .header-left {
-            a {
-                margin-left: 30px;
-                border: 1px solid black;
-                border-radius: 5px;
-                text-decoration: none;
-                padding: 5px;
-                background-color: black;
-                color: white;
-                font-size: 0.8rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                transition: 0.3s;
-
-                span {
-                    transition: 0.3s;
-                }
-            }
-
-            a:hover,
-            a:active {
-                transform: scale(1.05);
-
-                span {
-                    transform: translateX(-3px);
-                }
-            }
-        }
-
-        .header-right {
+        .header-container {
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
@@ -348,11 +310,6 @@ body {
                     transform: translateX(6px);
                 }
             }
-
-            .line {
-                border-top: 1px solid black;
-                width: 100%;
-            }
         }
 
         border-bottom: 1px solid black;
@@ -378,16 +335,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .contact-container:has(:focus) textarea:valid,
-        .contact-container:has(:focus) input:valid {
-            box-shadow: 0 0 0 2px #689e48;
-        }
-
-        .contact-container:has(:focus) textarea:invalid,
-        .contact-container:has(:focus) input:invalid {
-            box-shadow: 0 0 0 2px #ff0000;
-        }
+        flex-direction: column;
 
         .contact-container {
             max-width: 1000px;
@@ -396,6 +344,22 @@ body {
             padding: 20px;
             margin: 20px;
             width: 100%;
+
+            :has(:focus) {
+
+                textarea:invalid,
+                input:invalid {
+                    box-shadow: 0 0 0 2px #ff0000;
+
+                    ~input[type=submit] {
+                        box-shadow: 0 0 0 2px #ff0000;
+                        transform: scale(1) !important;
+                        background-color: #447070;
+                        cursor: default;
+                        color: white;
+                    }
+                }
+            }
 
             form {
                 width: 100%;
@@ -438,15 +402,6 @@ body {
                 input[type=submit]:active {
                     transform: scale(0.99);
                     transition: 0.1s;
-                }
-
-                textarea:invalid~input[type=submit],
-                input:invalid~input[type=submit] {
-                    box-shadow: 0 0 0 2px #ff0000;
-                    transform: scale(1) !important;
-                    background-color: #447070;
-                    cursor: default;
-                    color: white;
                 }
             }
         }

@@ -296,6 +296,10 @@ body {
             }
         }
 
+        .ug-title {
+            height: 150px;
+        }
+
         border-bottom: 1px solid black;
     }
 
@@ -366,6 +370,8 @@ body {
             max-width: 1000px;
             padding: 50px;
         }
+
+        border-bottom: 1px solid black;
     }
 
     .contact {
@@ -455,7 +461,7 @@ body {
     background-color: #CDCDCD;
 }
 
-.accordion {
+.collapsible {
     margin-bottom: 1em;
 
     input[type="checkbox"] {
@@ -469,7 +475,7 @@ body {
         contain: layout;
     }
 
-    input[type="checkbox"]:checked~.handle {
+    input[type="checkbox"]:checked~.panel-header {
         .icon::before {
             content: "keyboard_arrow_down";
         }
@@ -480,14 +486,13 @@ body {
         }
     }
 
-    .handle {
+    .panel-header {
         margin: 0;
         font-size: 1.125em;
         line-height: 1.2em;
 
         label {
             box-shadow: 0px 0px 4px black;
-
             border-radius: 10px 10px;
             display: block;
             color: #333;

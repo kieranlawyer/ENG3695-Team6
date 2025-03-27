@@ -482,3 +482,15 @@ body {
         will-change: max-height, padding;
     }
 }
+
+#uiSections:hover{
+    transition: all .3s ease-in;
+    transform: scale(1.15);
+  
+  }
+  
+  .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }

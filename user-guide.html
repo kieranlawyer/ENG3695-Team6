@@ -7,8 +7,9 @@
     <title>User Guide | Dbit N300 Router</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="The Dbit N300 router is an excellent affordable choice to get devices around the home connected to the internet. Follow our simple setup guide to get started today!">
-    <meta name="keywords" content="dbit n300, wifi, connect, internet, router, how to set up router">
+        content="Comprehensive user guide for the Dbit N300 router. Learn how to set up, configure, and optimize your router for the best performance.">
+    <meta name="keywords"
+        content="Dbit N300 user guide, router manual, setup instructions, network settings, WiFi configuration, QoS settings, firmware update">
 
     <!-- include font -->
     <link rel="preconnect" href="https://rsms.me/">
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-    <main class="user-guide main">
+    <main class="main">
         <section class="header">
             <!-- <div class="header-left">
                 <a href="index.html">
@@ -60,7 +61,7 @@
             </div>
         </section>
 
-        <section class="banner">
+        <section class="banner" id="introduction">
             <div class="banner-container">
                 <p>
                     This section provides step-by-step instructions to help you <span class="highlight">quickly</span>
@@ -73,134 +74,394 @@
 
                 <p>In this guide, you'll learn how to:</p>
 
-                <ul>
-                    <li>✔ Unbox and connect your router</li>
-                    <li>✔ Access the router's web interface</li>
-                    <li>✔ Configure Wi-Fi settings and security</li>
-                    <li>✔ Set up parental controls</li>
-                    <li>✔ Configure metering/bandwidth limits</li>
-                    <li>✔ Create guest networks</li>
-                    <li>✔ Update firmware for optimal performance</li>
+                <ul class="check-list">
+                    <li><a href="#step-1">Unbox and connect your router</a></li>
+                    <li><a href="#step-2">Connect to the Wi-Fi network</a></li>
+                    <li><a href="#step-3">Access the router's web interface</a></li>
+                    <li><a href="#step-4">Configure Wi-Fi settings and network security</a></li>
+                    <li><a href="#step-5">Secure the router control panel</a></li>
+                    <li><a href="#step-6">(Optional) Configure QoS</a></li>
                 </ul>
                 <br>
 
-                <p>Dont feel like reading? No worries! Check out this quick video describing 
-                    the setup and the benefits of the Dbit N300 Router!</p>
-                <br>
+                <p>
+                    Dont feel like reading? No worries! Check out this quick video describing
+                    the setup and the benefits of the Dbit N300 Router!
+                </p>
 
-                <iframe width="560" height="315" class="center" src="https://www.youtube.com/embed/178uRdXWXYA?si=cphLw4amUi37gnmT" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen></iframe>
-                <br>
-                <br>
+                <div class="vid-container">
+                    <iframe width="560" height="315" class="center"
+                        src="https://www.youtube.com/embed/178uRdXWXYA?si=cphLw4amUi37gnmT" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
                 <p>
                     Follow the instructions carefully, and if you encounter any issues, check the
-                    <a href="troubleshooting.html">Troubleshooting</a> or <a href="troubleshooting.html">FAQ</a>
+                    <a href="troubleshooting.html">Troubleshooting</a> or <a href="faq.html">FAQ</a>
                     sections for additional help.
                 </p>
             </div>
         </section>
 
-        <section class="banner alt-color">
+        <section class="banner alt-color" id="step-1">
             <div class="banner-container">
                 <h2>1. Unbox and connect your router</h2>
                 <br>
 
                 <p>
-                    On the back of the N300 you will find a few different ports, 
-                    and in your box it should have an ethernet cord and a power cord. 
-                    Connect the power cord to a source of power, and the port on the far 
-                    right side. On the port directly to the left, connect one side of the 
-                    ethernet cable, and the other goes into your modem. 
+                    In the box, you should have:
+                </p>
+
+                <ol>
+                    <li>The router</li>
+                    <li>The power cable</li>
+                    <li>An ethernet cable (RJ45)</li>
+                </ol>
+                <br>
+
+                <p>Remove all items from the box. Unwrap them and place them aside.</p>
+                <div class="pic-container">
+                    <img src="assets/images/contents.png" alt="Picture of the contents in the box." class="width-60" />
+                    <p>The contents of the box.</p>
+                </div>
+
+                <p>
+                    On the back of the N300 you will find a few different ports:
+                </p>
+                <div class="pic-container">
+                    <img src="assets/images/back.jpg" alt="Picture of the ports on the back of the router." />
+                    <p>The ports on the back of the router.</p>
+                </div>
+
+                <p>
+                    Connect the power cord to a source of power, then connect the other side of the cable to the port on
+                    the back of the routed labeled <span class="highlight">DC IN</span>. You should now see a
+                    <span class="red">RED</span> light on the top of the router.
+                </p>
+                <br>
+
+                <p>
+                    Connect one side of the RJ45 ethernet cable to the port labeled <span class="highlight">WAN</span>.
+                    Connect the other side of the ethernet cable to a LAN port on your
+                    <a href="faq.html#modem" target="_blank" rel="noopener">modem</a>.
+                </p>
+                <br>
+                <p>
+                    <span class="note">
+                        (Optionally, you may connect the other side to a LAN port on existing router instead of a modem.
+                        This will turn your Dbit N300 router into a secondary access point to the same network. Moving
+                        the Dbit N300 to the other side of your house from the first router will allow for enhanced
+                        connectivity for devices that were previously far from the router.)
+                    </span>
+                    <!-- <p>
+                        With some careful setup described in the advanced section, you can effectively set up your Dbit N300
+                        as a proper range extender for that network, allowing devices to seamlessly pick the access point
+                        that works
+                    </p> -->
+                </p>
+                <br>
+
+                <p>
+                    If all has gone well, the light on the top of the router should turn from
+                    <span class="red">RED</span> to <span class="green">GREEN</span>.
+                </p>
+                <br>
+                <p class="note">
+                    Note: It may take a few minutes to change color.
+                    You may proceed to <a href="#step-2">step 2</a> as long as the light is lit up, regardless of color.
                 </p>
             </div>
         </section>
 
-        <section class="banner alt-color">
+        <section class="banner alt-color" id="step-2">
             <div class="banner-container">
-                <h2>2. Access the router's web interface</h2>
+                <h2>2. Connect to the Wi-Fi network</h2>
+                <br>
+
+                <p>Pick up a device capable of connecting to Wi-Fi. Your phone or laptop will work.</p>
                 <br>
 
                 <p>
-                    To log into the router itself you will need to go to a search engine and 
-                    enter the following IP address: 192.168.10.1. There is a default login on 
-                    the bottom of your router, or you may need to enter your selected username 
-                    and password if you changed them.
+                    Head to the Wi-Fi settings and look for a network called <span class="highlight">N300-36E1</span>.
+                </p>
+
+                <div class="pic-container">
+                    <img src="assets/images/wifi-scan.png"
+                        alt="Picture of the N300 wifi network showing up on the list of visible networks." />
+                    <p>N300 Wi-Fi network</p>
+                </div>
+
+                <p>
+                    Connect to this network. The default password is <span class="highlight">123456789</span>. If this
+                    password does NOT work, hold the button labeled <span class="highlight">RESET</span> for ten
+                    seconds. Wait one minute, then re-try.
+                </p>
+                <br>
+
+                <p>
+                    If everything in <a href="#step-1">step 1</a> went well and you have a <span
+                        class="green">GREEN</span> light on top of your router, you should have access to the internet
+                    via this network!
+                </p>
+                <br>
+
+                <p>
+                    Unfortunately, your network is <span class="red">UNSECURE</span> at this point and needs further
+                    configuration to be safe to use. Continue to <a href="#step-3">step 3</a> for futher setup!
                 </p>
             </div>
         </section>
 
-        <section class="banner alt-color">
+        <section class="banner alt-color" id="step-3">
             <div class="banner-container">
-                <h2>3. Configure Wi-Fi settings and security</h2>
+                <h2>3. Access the router's web interface</h2>
                 <br>
 
                 <p>
-                    Once connected and logged into the web interface, head to the internet section 
-                    on the left side, and select ‘DHCP’. Then, go to down to the wifi section, and 
-                    setup your SSID and Password. The SSID is simply the name for your wifi, and your 
-                    password will help you keep your network secure.
+                    First, open the web browser using the device you connected to the N300 network on.
+                </p>
+                <p>
+                    Navigate to the url <a href="http://192.168.10.1">http://192.168.10.1/</a>.
+                    You should be greeted with the interface shown below:
+                </p>
+
+                <div class="pic-container">
+                    <img src="assets/images/login.png" alt="Picture of the login page">
+                    <p>The login page</p>
+                </div>
+
+                <p>
+                    The default login credentials are:
+                </p>
+                <p>Username: <span class="highlight">admin</span></p>
+                <p>Password: <span class="highlight">admin</span></p>
+                <br>
+
+                <p>
+                    If this login information does NOT work, hold the button labeled
+                    <span class="highlight">RESET</span> on the back of the router for ten seconds.
+                    Wait one minute, then repeat <a href="#step-2">step 2</a> to re-connect to the network, and repeat
+                    step 3 up to here.
+                </p>
+                <br>
+
+                <p>Upon logging in, you should see something like the following:</p>
+                <div class="pic-container">
+                    <img src="assets/images/control.png"
+                        alt="Picture of the control panel landing page after logging in">
+                    <p>Control panel landing page</p>
+                </div>
+
+                <p>
+                    Now it's time to configure your router to your liking! Move on to <a href="#step-4">step 4</a>.
+                </p>
+            </div>
+        </section>
+
+        <section class="banner alt-color" id="step-4">
+            <div class="banner-container">
+                <h2>4. Configure Wi-Fi settings and network security</h2>
+                <br>
+
+                <p>
+                    Once connected and logged into the web interface, head to the <span class="highlight">WIFI</span>
+                    section using the navigation panel on the left side. Here you will need to set up the
+                    <span class="highlight">SSID</span> and the <span class="highlight">Password</span>.
+                </p>
+
+                <div class="pic-container">
+                    <img src="assets/images/ssid-password.png" alt="Picture of the SSID & Password configuration page.">
+                    <p>SSID and password configuration</p>
+                </div>
+
+
+                <p>
+                    The <span class="highlight">SSID</span> is the name of the network. This is what appears in the WiFi
+                    list on your devices.
+                </p>
+                <p>
+                    The <span class="highlight">password</span> is required to connect to the network. This is not
+                    associated with the login to the control panel.
+                </p>
+                <br>
+
+                <p>
+                    You may pick any SSID you find suitable, so long as it is no longer than
+                    <span class="highlight">32 characters</span> and does not contain illegal characters.
+                </p>
+                <br>
+
+                <p>
+                    It is recommended to pick a <span class="highlight">secure</span> password. As a general rule of
+                    thumb:
+                </p>
+                <ol>
+                    <li>Make them long</li>
+                    <li>Make them random</li>
+                    <li>Make them unique</li>
+                </ol>
+                <br>
+
+                <p>
+                    Your networks security is dependent on a secure choice of password. If your password is too weak,
+                    attackers may join your network and monitor activity. They may be able to extract login credentials
+                    or access tokens from websites you visit.
+                    <span class="highlight">It is imperative you pick a secure password.</span>
+                </p>
+                <br>
+
+                <p>
+                    For more information on picking a secure password, please refer to
+                    <a href="https://www.cisa.gov/secure-our-world/use-strong-passwords">this resource</a>.
+                </p>
+                <br>
+
+                <p>
+                    Once you have updated the SSID and password, click the <span class="highlight">Save</span> button at
+                    the bottom center of the page.
+                </p>
+                <br>
+
+                <p>
+                    <span class="highlight">NOTE: </span> Once you save the settings, you will be kicked from the
+                    network if the SSID has changed. You must head back to <a href="#step-2">step 2</a> substituting
+                    <span class="highlight">N300-36E1</span> for the new SSID you have picked to re-connect.
+                </p>
+                <br>
+
+                <p>
+                    <span class="highlight">Congratulations</span>, you now have customized your network name and
+                    secured your network from outside
+                    attackers!
+                </p>
+                <br>
+
+                <p>
+                    Unfortunately, the router control panel is still easily accessible from anyone connected
+                    to the network. Further setup is required to secure the control panel. Head to
+                    <a href="#step-5">step 5</a> for futher setup.
+                </p>
+            </div>
+        </section>
+
+        <section class="banner alt-color optional" id="step-5">
+            <div class="banner-container">
+                <h2>5. Secure the router control panel</h2>
+                <br>
+
+                <p>The final step of necessary setup is to secure the control panel.</p>
+                <br>
+
+                <p>
+                    Navigate to the <span class="highlight">System</span> page using the navigation menu on the left. At
+                    the top of the page, you should see the following configuration box:
+                </p>
+
+                <div class="pic-container">
+                    <img src="assets/images/admin.png" alt="Picture of the control panel login configuration box.">
+                    <p>Control panel login configuration</p>
+                </div>
+
+                <p>
+                    Type the old password (by default <span class="highlight">admin</span>) into the <span
+                        class="highlight">Old password</span> box.
+                </p>
+                <br>
+
+                <p>
+                    Pick a new password. Refer back to <a href="#step-4">step 4</a> for information on picking a secure
+                    password. It is recommended to save this password somewhere safe - either physically write it on a
+                    piece of paper and store it in a safe place, or use a password manager.
+                </p>
+                <br>
+
+                <p>
+                    The password picked must be between <span class="highlight">8-30</span> characters and must contain
+                    1 uppercase letter, 1 lowercase letter, and 1 number. It can NOT contain special characters.
+                </p>
+                <br>
+
+                <p>
+                    Once you have picked a new password and securely saved it down, type it into both the
+                    <span class="highlight">New password</span> and <span class="highlight">Confirm password</span>
+                    boxes.
+                </p>
+                <br>
+
+                <p>
+                    Finally, click the <span class="highlight">Save</span> button at the bottom center of the page.
+                </p>
+                <br>
+
+                <p>
+                    You will be sent back to the login page. Login with your new credentials to ensure you still have
+                    access.
+                </p>
+                <br>
+
+                <p>
+                    If you find yourself unable to login to the control panel, you may
+                    <span class="highlight">Factory reset</span> your router to restore default configuration. To do so,
+                    hold the <span class="highlight">RESET</span> button on the back of the router down for 10 seconds.
+                    Wait one minute, then you must repeat the setup instructions starting from
+                    <a href="#step-2">step 2</a>.
+                </p>
+                <br>
+
+                <div class="line"></div>
+                <br>
+
+                <p>
+                    <span class="highlight">Congratulations!</span> Your router is now set up and ready to use. You may
+                    now connect up your devices around the house and access the internet.
+                </p>
+                <br>
+
+                <p>
+                    Some additional configuration options will be discussed below. The remaining setup steps are
+                    <span class="highlight">optional</span>.
                 </p>
             </div>
         </section>
 
         <section class="banner alt-color optional">
             <div class="banner-container">
-                <h2>4. Set up parental controls</h2>
+                <h2>6. (Optional) Configure QoS</h2>
                 <br>
 
                 <p>
-                    Under the 'QoS' tab, you are able to check what devices are connected to your network and 
-                    limit their internet access altogether. Turn off the internet access for the gaming 
-                    console, tablets, computers, or anything else your kids have connected to wifi, whenever
-                    you need to.
+                    Quality of Service (QoS) allows you to prioritize network traffic to ensure that critical
+                    applications receive sufficient bandwidth. This is especially useful for reducing lag in online
+                    gaming, ensuring smooth video streaming, and preventing slowdowns during video calls.
                 </p>
                 <br>
-                <br>
-
-                <img id="uiSections" src="assets/images/QoSSection.png" alt="QoS section" width="700" height="300" class="center">
-            </div>
-        </section>
-
-        <section class="banner alt-color optional">
-            <div class="banner-container">
-                <h2>6. Configure metering/bandwidth limits</h2>
-                <br>
 
                 <p>
-                    In the same tab as above, the 'QoS' tab, you are able to set up an upload and download speed limit to
-                    ensure no one device is hogging all of the network.
+                    In this section, you may configure bandwidth limits per each device connected to the network. You
+                    may also temporarily disable certain devices from accessing the internet. These devices remain
+                    connected to your router but are no longer sucking up precious bandwidth. Disabled devices will be
+                    temporarily moved to the "Prohibited devices" section. You may delete them from this section to
+                    re-enable their internet connection.
                 </p>
-            </div>
-        </section>
-
-        <section class="banner alt-color optional">
-            <div class="banner-container">
-                <h2>8. Create guest networks</h2>
                 <br>
 
                 <p>
-                    Under the 'WiFi' tab, you are able to enable a guest network, set it's name and password,
-                    and toggle it on or off. Use this to allow others to connect to your network without 
-                    compromising the security of your network.
+                    <span class="highlight">Warning: </span> disabling internet for the device you are using to acccess
+                    the router page will prevent you from being able to access the router page to re-enable the
+                    connection. If this happens, you must connect from a new device, log in, and remove your devices
+                    from the "Prohibited devices" section.
                 </p>
-            </div>
-        </section>
 
-        <section class="banner alt-color optional">
-            <div class="banner-container">
-                <h2>9. Update firmware for optimal performance</h2>
-                <br>
+                <div class="pic-container">
+                    <img src="assets/images/qos.png" alt="QoS section">
+                    <p>The QoS Section</p>
+                </div>
 
                 <p>
-                    Under the 'System' tab, you are able to check for updates, and update if there is one available.
-                    It is best practice to check for these updates at least once a month, as they often include
-                    valuable security patches and performance improvements that helps keep your network running
-                    safely and quickly.
-
-                    Note: Your network will be down during the update period, but should automatically reconnect to
-                    the modem, and your devices in turn.
+                    After any changes, the <span class="highlight">Save</span> button at the bottom center of the page
+                    must be clicked.
                 </p>
             </div>
         </section>

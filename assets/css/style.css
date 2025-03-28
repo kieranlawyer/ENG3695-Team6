@@ -437,14 +437,6 @@ body {
                 textarea:invalid,
                 input:invalid {
                     box-shadow: 0 0 0 2px #ff0000;
-
-                    ~input[type=submit] {
-                        box-shadow: 0 0 0 2px #ff0000;
-                        transform: scale(1) !important;
-                        background-color: #447070;
-                        cursor: default;
-                        color: white;
-                    }
                 }
             }
 
@@ -489,6 +481,22 @@ body {
                 input[type=submit]:active {
                     transform: scale(0.99);
                     transition: 0.1s;
+                }
+
+                textarea:valid,
+                input:not([type=submit]):valid {
+                    box-shadow: 0 0 0 2px #00ff00;
+                }
+
+                textarea:invalid,
+                input:invalid {
+                    ~input[type=submit] {
+                        box-shadow: 0 0 0 2px #ff0000;
+                        transform: scale(1) !important;
+                        background-color: #447070;
+                        cursor: default;
+                        color: white;
+                    }
                 }
             }
         }

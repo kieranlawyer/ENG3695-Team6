@@ -312,6 +312,10 @@ body {
                 margin-left: 40px;
             }
 
+            ul {
+                margin-left: 40px;
+            }
+
             .button {
                 text-decoration: none;
                 display: inline-flex;
